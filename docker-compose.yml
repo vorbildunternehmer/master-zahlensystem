@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  sharingImgs:
+    image: node:12.2.0-alpine
+    build:
+      context: ./
+    volumes:
+      - '.:/app/'
+      - '/app/node_modules'
+    command: node test.js
+    env_file: .env

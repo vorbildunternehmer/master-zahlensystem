@@ -1,0 +1,21 @@
+{
+  "name": "master-zahlensystem-generator",
+  "tags": "Gedächtnistraining Master-Zahlensystem",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "node test.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "src/*",
+    "package.json",
+    "README.md"
+  ],
+  "author": "Jens Janetzki",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  }
+}
