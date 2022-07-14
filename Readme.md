@@ -26,20 +26,13 @@ Die Wörter können anschließend wieder per Zuordnungliste in Zahlen umgewandel
 |8 | f, v, w, ph | V8-Motor bei VW<br />das handschriftliche ''f'' hat genau wie 8 zwei Schleifen
 |9 | p, b | 9 ist ein gespiegeltes p oder gedrehtes b (beide sind lautverwandt)
 
-# Docker-Compose Test
-
-**.env**
-```sh
-NUMBER=123456
-```
-Anschließend
-```sh
-docker-compose up -d;
-```
-
-PS: In der Konsole wird das Ergebnis angezeigt.
-
 # Installation
+
+```bash
+npm i https://github.com/vorbildunternehmer/master-zahlensystem;
+```
+
+# Verwendung
 
 ```js
 import Major from 'major-zahlensystem-generator'
@@ -52,3 +45,16 @@ const Major = require('major-zahlensystem-generator')
 Major.majorTranslate(123456)
 return Major.result
 ```
+
+# Docker-Compose Developement
+
+**.env**
+```sh
+NUMBER=123456
+```
+Anschließend
+```sh
+docker-compose up -d;
+```
+
+PS: In der Konsole wird das Ergebnis angezeigt.
