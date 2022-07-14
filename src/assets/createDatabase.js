@@ -1,18 +1,17 @@
-const fs = require('fs')
+'use strict'
+
+const wl = require('./wordlist.js')
 
 const createWorkbook = function () {
   this.workbook = {}
   this.callback = function () {}
 
-  this.getData = async function () {
-    const data = await fs.readFileSync('./src/wordlist.txt', 'utf8');
+  this.getData = function () {
+    const data = wl.wordlist;
     return data
   }
-  this.saveWorkbook = function () {
-    fs.writeFile('./src/database.json', JSON.stringify(this.workbook), 'utf8', function () {})
-  }
   this.run = async function (callback) {
-    let data = await this.getData()
+    let data = this.getData()
     data = data.split("\n")
 
     data.forEach(this.translate.bind(this))

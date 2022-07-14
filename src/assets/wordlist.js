@@ -1,3 +1,6 @@
+'use strict'
+
+const wordlist = `
 Abend
 Abschnitt
 Abstimmung
@@ -278,7 +281,6 @@ Zeitung
 Zins
 Zugang
 Zweifel
-
 Abbau
 Ablehnung
 Alter
@@ -1003,3 +1005,6 @@ Puck
 Puff
 Baby
 Schuh
+`;
+
+module.exports = { wordlist }

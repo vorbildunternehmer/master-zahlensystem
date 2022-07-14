@@ -1,3 +1,7 @@
+'use strict'
+
 const major = require('./src/index.js')
 
-new major.majorTranslate(process.env.NUMBER)
+major.majorTranslate(process.env.NUMBER)
+
+console.log(major.result)

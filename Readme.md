@@ -1,6 +1,6 @@
-# Master-Zahlen-System
+# Major-Zahlen-System
 
-Das Master-Zahlensystem ist ein powervolles Tool des Gedächtnistrainings.
+Das Major-Zahlensystem ist ein powervolles Tool des Gedächtnistrainings.
 
 Fortan funktioniert das Umwandeln von Zahlen in Wörter noch einfacher. Mittels diesem Programms ist es möglich, aus beliebig langen Zahlenkombinationen automatisch Wörter nach dem Master-System zu generieren.
 
@@ -38,3 +38,17 @@ docker-compose up -d;
 ```
 
 PS: In der Konsole wird das Ergebnis angezeigt.
+
+# Installation
+
+```js
+import Major from 'major-zahlensystem-generator'
+Major.majorTranslate(123456)
+return Major.result
+```
+Alternativ
+```js
+const Major = require('major-zahlensystem-generator')
+Major.majorTranslate(123456)
+return Major.result
+```

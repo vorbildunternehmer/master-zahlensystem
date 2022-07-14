@@ -1,14 +1,10 @@
-const fs = require('fs')
+'use strict'
 
 const getStrings = function () {
   this.compareNumber = false
   this.number = []
   this.database = false
   this.output = []
-  this.getDatabase = async function () {
-    const data = await fs.readFileSync('./src/database.json', 'utf8');
-    return JSON.parse(data)
-  }
 
   this.swap = function (json){
     var ret = {};
@@ -19,9 +15,6 @@ const getStrings = function () {
   }
 
   this.run = async function (nbr) {
-    if (!this.database) {
-      this.database = await this.getDatabase()
-    }
     this.database = this.swap(this.database)
     this.compareNumber = nbr
     this.calculateWords(nbr)
@@ -29,7 +22,7 @@ const getStrings = function () {
 
   this.calculateWords = function (nbr) {
     if (!nbr) {
-      console.log(this.compareNumber, '=', this.output.join(' '))
+      this.result = [this.compareNumber, this.output.join(' ')]
       return false
     }
     this.number = nbr
@@ -39,8 +32,8 @@ const getStrings = function () {
   this.calcChars = function (nbr) {
     const nbrTmp = {}
 
-    for (var i = 1; i <= nbr.split('').length -1; i++) {
-      nbrTmp[i] = nbr.slice(0, -i)
+    for (var i = 1; i <= nbr.toString().split('').length -1; i++) {
+      nbrTmp[i] = nbr.toString().slice(0, -i)
     }
     nbrTmp[0] = nbr
 
@@ -59,7 +52,7 @@ const getStrings = function () {
     })
 
     const clean = Object.keys(nbr).length - (output[0] * 1)
-    this.number = this.number.slice(clean, this.number.length)
+    this.number = this.number.toString().slice(clean, this.number.length)
 
     this.output.push(output[2])
 
