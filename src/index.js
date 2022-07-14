@@ -17,4 +17,11 @@ const majorTranslate = function (number) {
   this.db.run()
 }
 
-module.exports = { majorTranslate }
+const majorTranslateWord = function (word) {
+  this.result = false
+  const calc = new workbook.createWorkbook()
+  calc.translate(word)
+  this.result = [word, calc.workbook[word]]
+}
+
+module.exports = { majorTranslate, majorTranslateWord }

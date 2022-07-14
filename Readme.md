@@ -2,14 +2,14 @@
 
 Das Major-Zahlensystem ist ein powervolles Tool des Gedächtnistrainings.
 
-Fortan funktioniert das Umwandeln von Zahlen in Wörter noch einfacher. Mittels diesem Programms ist es möglich, aus beliebig langen Zahlenkombinationen automatisch Wörter nach dem Master-System zu generieren.
+Fortan funktioniert das Umwandeln von Zahlen in Wörter noch einfacher. Mittels dieses Programms ist es möglich, aus beliebig langen Zahlenkombinationen automatisch Wörter nach dem Master-System zu generieren. Und Wörter können in Zahlen konvertiert werden.
 
 #### Beispiel:
 `123456 = Ton Mauer Leiche`
 
 Die Wortbibliothek umfasst über 1.000 Wörter.
 
-Die Wörter können anschließend wieder per Zuordnungliste in Zahlen umgewandelt werden.
+Die Wörter können anschließend wieder in Zahlen umgewandelt werden.
 
 ### Zuordnungliste
 
@@ -32,7 +32,7 @@ Die Wörter können anschließend wieder per Zuordnungliste in Zahlen umgewandel
 npm i https://github.com/vorbildunternehmer/master-zahlensystem;
 ```
 
-# Verwendung
+# Verwendung Zahl zu Wort
 
 ```js
 import Major from 'major-zahlensystem-generator'
@@ -46,11 +46,26 @@ Major.majorTranslate(123456)
 return Major.result
 ```
 
+# Verwendung Wort zu Zahl
+
+```js
+import Major from 'major-zahlensystem-generator'
+Major.majorTranslateWord('Testwort')
+return Major.result
+```
+Alternativ
+```js
+const Major = require('major-zahlensystem-generator')
+Major.majorTranslateWord('Testwort')
+return Major.result
+```
+
 # Docker-Compose Developement
 
 **.env**
 ```sh
 NUMBER=123456
+WORD='Testwort'
 ```
 Anschließend
 ```sh

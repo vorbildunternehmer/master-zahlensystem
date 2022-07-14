@@ -1,7 +1,7 @@
 {
   "name": "major-zahlensystem-generator",
   "tags": "Gedächtnistraining, Master-Zahlensystem",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Das Major-System (auch Zifferncode nach Aimée Paris genannt) ist eine Gedächtnistechnik, die auf der Zuordnung von Lauten zu Ziffern und Wörtern zu Zahlen basiert.",
   "main": "src/index.js",
   "scripts": {
